@@ -1,0 +1,77 @@
+h1 {
+  border: width 10%;
+  border-style: solid;
+  border-color: red green blue yellow;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: black;
+  color: blanchedalmond;
+  text-align: center;
+}
+.class-theme1 {
+  background-image: url(theme.png);
+  background-size: 100% 100%;
+}
+.class-theme2 {
+  background-image: url(theme.png);
+  background-size: cover;
+}
+.class-theme3 {
+  background-image: url(theme.png);
+  background-size: cover;
+}
+.class-theme4 {
+  background-color: rgb(150, 127, 71);
+}
+
+h2 {
+  border-width: 2%;
+  border-style: solid;
+  border-color: red;
+  width: 30%;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: blanchedalmond;
+  color: rgb(121, 11, 11);
+  font-size: 30px;
+  padding: 1%;
+}
+.class-cut {
+  color: rgb(1, 66, 1);
+  font-size: 15px;
+}
+.class-define {
+  color: rgba(97, 8, 8);
+}
+.class-blo {
+  color: rgba(97, 8, 8);
+}
+p {
+  text-align: center;
+  color: rgb(50, 23, 112);
+}
+a {
+  color: rgb(235, 5, 5);
+}
+
+.class-mail {
+  color: rgb(70, 60, 5);
+}
+.class-numero {
+  color: rgb(70, 60, 5);
+}
+.class-face {
+  color: blue;
+}
+.class-github {
+  color: rgb(253, 12, 161);
+}
+.class-linkedin {
+  color: rgb(100, 102, 9);
+}
