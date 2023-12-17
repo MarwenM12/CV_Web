@@ -4,30 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
-    <link rel="stylesheet" href="style.css"">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="class-theme3">
-<h1><big><ins>Contact Form</ins></big></h1>
-<a href="index.html"> Home Page </a>
-<hr width="300" align="left" />
-    <form action="#" method="post">
-        <table>
-            <tr>
-                <td><label for="nom">Nom :</label></td>
-                <td><input type="text" id="nom" name="nom" required></td>
-            </tr>
-            <tr>
-                <td><label for="email">Email :</label></td>
-                <td><input type="email" id="email" name="email" required></td>
-            </tr>
-            <tr>
-                <td><label for="adresse">address :</label></td>
-                <td><textarea id="address" name="address" rows="4" required></textarea></td>
-            </tr>
-        </table>
-    
-        <input type="submit" value="send">
+    <h1>
+      <big><ins>Contact Form</ins></big>
+    </h1>
+    <a href="index.html"> Home Page </a>
+    <hr width="300" align="left" />
+
+    <form id="contactForm" action="#" method="post">
+      <table>
+        <tr>
+          <td><label for="nom">Nom :</label></td>
+          <td><input type="text" id="nom" name="nom" required /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email :</label></td>
+          <td><input type="email" id="email" name="email" required /></td>
+        </tr>
+        <tr>
+          <td><label for="adresse">Address :</label></td>
+          <td>
+            <textarea id="address" name="address" rows="4" required></textarea>
+          </td>
+        </tr>
+      </table>
+
+      <input type="submit" value="send" />
     </form>
-    </form>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          var nomInput = document.getElementById("nom");
+          if (!/^[a-zA-Z]+$/.test(nomInput.value)) {
+            alert("Le champ 'Nom' doit contenir uniquement des lettres.");
+            event.preventDefault();
+            return;
+          }
+
+          var addressInput = document.getElementById("address");
+          if (/^\d+$/.test(addressInput.value)) {
+            alert(
+              "Le champ 'Address' ne peut pas contenir uniquement des nombres."
+            );
+            event.preventDefault();
+            return;
+          }
+
+          alert("Formulaire envoyé !");
+
+          event.preventDefault();
+        });
+    </script>
   </body>
 </html>
